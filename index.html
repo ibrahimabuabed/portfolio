@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إبراهيم عامر أبو عابد | VIP Portfolio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root { --bg-color: #030303; --second-bg-color: rgba(25, 25, 25, 0.6); --main-color: #d4af37; --text-color: #ffffff; --muted-color: #a0a0a0; --glass-border: rgba(212, 175, 55, 0.15); }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; text-decoration: none; scroll-behavior: smooth; }
+        body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.8; overflow-x: hidden; background-image: radial-gradient(circle at 50% 0%, #1a1a1a 0%, #030303 70%); }
+        header { position: fixed; top: 0; left: 0; width: 100%; padding: 20px 5%; background: rgba(3, 3, 3, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); display: flex; justify-content: space-between; align-items: center; z-index: 1000; border-bottom: 1px solid var(--glass-border); transition: 0.3s; }
+        .logo { font-size: 28px; font-weight: 900; color: var(--text-color); letter-spacing: 1px; }
+        .logo span { color: var(--main-color); text-shadow: 0 0 15px rgba(212, 175, 55, 0.5); }
+        .navbar { display: flex; gap: 35px; align-items: center; }
+        .navbar a { color: var(--text-color); font-size: 18px; font-weight: 600; transition: 0.3s; position: relative; }
+        .navbar a::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0%; height: 2px; background: var(--main-color); transition: 0.3s; }
+        .navbar a:hover::after { width: 100%; }
+        .navbar a:hover { color: var(--main-color); }
+        .lang-btn { background: linear-gradient(45deg, #d4af37, #f3e5ab); color: #000; border: none; padding: 10px 24px; border-radius: 30px; font-size: 16px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: 0.4s ease; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3); }
+        .lang-btn:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6); }
+        .container { max-width: 1200px; margin: 0 auto; width: 100%; }
+        section { padding: 120px 5% 80px; min-height: 100vh; display: flex; align-items: center; }
+        .heading { text-align: center; font-size: 48px; font-weight: 900; margin-bottom: 60px; letter-spacing: 1px; }
+        .heading span { color: var(--main-color); }
+        .home { flex-direction: column; text-align: center; justify-content: center; }
+        .profile-img-box { position: relative; width: 280px; height: 280px; border-radius: 50%; margin: 0 auto 40px; padding: 10px; background: linear-gradient(45deg, transparent, var(--main-color), transparent); animation: rotateBorder 6s linear infinite; }
+        @keyframes rotateBorder { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .profile-img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 4px solid var(--bg-color); animation: rotateImage 6s linear infinite reverse; }
+        @keyframes rotateImage { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .home-content h1 { font-size: 55px; font-weight: 900; margin-bottom: 10px; }
+        .home-content h2 { font-size: 20px; font-weight: 600; color: var(--muted-color); margin-bottom: 15px; letter-spacing: 2px; }
+        .home-content h3 { font-size: 28px; color: var(--main-color); margin-bottom: 25px; }
+        .home-content p { font-size: 19px; color: #d0d0d0; max-width: 800px; margin: 0 auto 30px; line-height: 1.9; }
+        .glass-card { background: var(--second-bg-color); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: 50px; border-radius: 20px; border: 1px solid var(--glass-border); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); transition: 0.4s ease; }
+        .glass-card:hover { transform: translateY(-10px); border-color: rgba(212, 175, 55, 0.5); box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15); }
+        .education .container, .skills .container, .certificate .container { display: flex; flex-direction: column; align-items: center; }
+        .edu-box { max-width: 900px; width: 100%; text-align: center; }
+        .edu-box h3 { font-size: 30px; color: var(--main-color); margin-bottom: 15px; }
+        .edu-box h4 { font-size: 22px; margin-bottom: 20px; color: #fff; }
+        .edu-box p { font-size: 18px; color: #bbb; }
+        .skills-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 1000px; }
+        .skill-tag { background: rgba(255, 255, 255, 0.03); padding: 15px 30px; border-radius: 50px; font-size: 18px; font-weight: 700; color: var(--text-color); border: 1px solid var(--glass-border); display: flex; align-items: center; gap: 12px; transition: 0.4s; cursor: default; }
+        .skill-tag i { color: var(--main-color); font-size: 22px; }
+        .skill-tag:hover { background: var(--main-color); color: #000; transform: translateY(-7px) scale(1.05); box-shadow: 0 10px 20px rgba(212, 175, 55, 0.4); border-color: var(--main-color); }
+        .skill-tag:hover i { color: #000; }
+        .cert-card { max-width: 900px; width: 100%; text-align: center; }
+        .cert-card h3 { font-size: 26px; color: var(--main-color); margin-bottom: 10px; }
+        .cert-card p { font-size: 17px; color: #aaa; margin-bottom: 30px; }
+        .cert-img { width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.8); border: 2px solid var(--glass-border); transition: 0.5s; }
+        .cert-img:hover { transform: scale(1.03); border-color: var(--main-color); }
+        .contact .container { text-align: center; }
+        .social-links { display: flex; justify-content: center; gap: 30px; margin-top: 50px; }
+        .social-links a { display: inline-flex; justify-content: center; align-items: center; width: 80px; height: 80px; background: rgba(255,255,255,0.02); border: 2px solid var(--glass-border); border-radius: 50%; font-size: 35px; color: var(--main-color); transition: 0.5s ease; backdrop-filter: blur(5px); }
+        .social-links a:hover { background: var(--main-color); color: #000; box-shadow: 0 0 30px var(--main-color); transform: translateY(-10px) rotate(360deg); border-color: var(--main-color); }
+        footer { background: rgba(0,0,0,0.9); text-align: center; padding: 30px; border-top: 1px solid var(--glass-border); font-size: 17px; color: var(--muted-color); }
+        footer span { color: var(--main-color); font-weight: bold; }
+        .reveal { opacity: 0; transform: translateY(50px); transition: all 1s cubic-bezier(0.5, 0, 0, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        @media (max-width: 991px) { header { padding: 20px 3%; } .navbar { display: none; } .home-content h1 { font-size: 40px; } section { padding: 100px 3% 60px; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Ibrahim<span style="color:var(--main-color);">.VIP</span></a>
+        
+        <nav class="navbar">
+            <a href="#home" data-tr="nav_home">الرئيسية</a>
+            <a href="#education" data-tr="nav_edu">التعليم</a>
+            <a href="#skills" data-tr="nav_skills">المهارات</a>
+            <a href="#certificate" data-tr="nav_cert">الشهادات</a>
+            <a href="#contact" data-tr="nav_contact">تواصل</a>
+        </nav>
+
+        <button class="lang-btn" onclick="toggleLanguage()">
+            <i class="fas fa-globe"></i>
+            <span id="lang-text">English</span>
+        </button>
+    </header>
+
+    <section class="home" id="home">
+        <div class="container reveal">
+            <div class="profile-img-box">
+                <img src="me.jpg" alt="Ibrahim Profile" class="profile-img">
+            </div>
+            <div class="home-content">
+                <h2>IBRAHIM AMER IBRAHIM ABU ABUABED</h2>
+                <h1 data-tr="home_name">إبراهيم <span style="color:var(--main-color);">أبو عابد</span></h1>
+                <h3 data-tr="home_title">مطور ويب مستقل | Web Developer</h3>
+                <p data-tr="home_desc">
+                    طالب هندسة حاسوب ومطور برامج شغوف بتحويل الأفكار إلى أكواد برمجية فعالة ونظيفة. أهتم بكتابة البرامج النصية، تطوير تطبيقات الويب، والأنظمة الخلفية (Backend). أطمح دائماً لإيجاد حلول مبتكرة وبناء مشاريع عالية الجودة.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="education" id="education">
+        <div class="container reveal">
+            <h2 class="heading" data-tr="edu_heading">التعليم <span style="color:var(--main-color);">والأكاديميا</span></h2>
+            <div class="edu-box glass-card">
+                <h3 data-tr="edu_uni">الجامعة الإسلامية في غزة (IUG)</h3>
+                <h4 data-tr="edu_degree">طالب في السنة الثانية - تخصص هندسة حاسوب</h4>
+                <p data-tr="edu_desc">
+                    أكتسب من خلال دراستي معرفة أساسية وقوية في الخوارزميات، هياكل البيانات، الدوائر الكهربائية، ولغات البرمجة (مثل C++). أطبق المفاهيم النظرية على مشاريع عملية تشمل تطوير مواقع الويب، تحليل البيانات، وتطبيقات رؤية الحاسوب لتمهيد طريقي كـ <strong>Web Developer</strong> محترف.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="container reveal">
+            <h2 class="heading" data-tr="skills_heading">مهاراتي <span style="color:var(--main-color);">التقنية</span></h2>
+            <div class="skills-grid">
+                <div class="skill-tag"><i class="fab fa-python"></i> <span data-tr="skill_1">برمجة بايثون (Python)</span></div>
+                <div class="skill-tag"><i class="fas fa-laptop-code"></i> <span data-tr="skill_2">تطوير مواقع الويب</span></div>
+                <div class="skill-tag"><i class="fas fa-server"></i> <span data-tr="skill_3">الواجهة الخلفية (Backend)</span></div>
+                <div class="skill-tag"><i class="fab fa-html5"></i> HTML / CSS</div>
+                <div class="skill-tag"><i class="fab fa-js"></i> JavaScript</div>
+                <div class="skill-tag"><i class="fas fa-pepper-hot"></i> Flask</div>
+                <div class="skill-tag"><i class="fas fa-database"></i> SQLite</div>
+                <div class="skill-tag"><i class="fas fa-chart-line"></i> <span data-tr="skill_4">تحليل البيانات</span></div>
+                <div class="skill-tag"><i class="fas fa-table"></i> Pandas / Matplotlib</div>
+                <div class="skill-tag"><i class="fas fa-c"></i> C++</div>
+                <div class="skill-tag"><i class="fas fa-eye"></i> <span data-tr="skill_5">رؤية الحاسوب (CV)</span></div>
+                <div class="skill-tag"><i class="fas fa-code"></i> <span data-tr="skill_6">كتابة البرامج النصية</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="certificate" id="certificate">
+        <div class="container reveal">
+            <h2 class="heading" data-tr="cert_heading">الشهادات <span style="color:var(--main-color);">الاحترافية</span></h2>
+            <div class="cert-card glass-card">
+                <h3 data-tr="cert_title">شهادة بايثون وتحليل البيانات - Code Nest</h3>
+                <p data-tr="cert_desc">بواقع 50 ساعة تدريبية، معتمدة من مركز نواة التقنية للتطوير.</p>
+                <img src="cert.jpg" alt="Python Certificate" class="cert-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container reveal">
+            <h2 class="heading" data-tr="contact_heading">تواصل <span style="color:var(--main-color);">معي</span></h2>
+            <p style="font-size: 20px; color: #ccc;" data-tr="contact_desc">
+                هل لديك مشروع أو فكرة تود تنفيذها؟ لا تتردد في التواصل معي عبر المنصات التالية:
+            </p>
+            <div class="social-links">
+                <a href="https://wa.me/970592052286" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/ibra2007.him?stkn=MWVsYjBmYzF3YWN4OQ==" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://m.me/ibrahim.amer.abo.abed" target="_blank" title="Messenger"><i class="fab fa-facebook-messenger"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p data-tr="footer_text">تم التصميم والتطوير بواسطة <span style="color:var(--main-color);">إبراهيم عامر أبو عابد</span> &copy; 2026</p>
+    </footer>
+
+    <script>
+        const translations = {
+            ar: {
+                nav_home: "الرئيسية", nav_edu: "التعليم", nav_skills: "المهارات", nav_cert: "الشهادات", nav_contact: "تواصل",
+                home_name: "إبراهيم <span style='color:var(--main-color);'>أبو عابد</span>", home_title: "مطور ويب مستقل | Web Developer", home_desc: "طالب هندسة حاسوب ومطور برامج شغوف بتحويل الأفكار إلى أكواد برمجية فعالة ونظيفة. أهتم بكتابة البرامج النصية، تطوير تطبيقات الويب، والأنظمة الخلفية (Backend). أطمح دائماً لإيجاد حلول مبتكرة وبناء مشاريع عالية الجودة.",
+                edu_heading: "التعليم <span style='color:var(--main-color);'>والأكاديميا</span>", edu_uni: "الجامعة الإسلامية في غزة (IUG)", edu_degree: "طالب في السنة الثانية - تخصص هندسة حاسوب", edu_desc: "أكتسب من خلال دراستي معرفة أساسية وقوية في الخوارزميات، هياكل البيانات، الدوائر الكهربائية، ولغات البرمجة (مثل C++). أطبق المفاهيم النظرية على مشاريع عملية تشمل تطوير مواقع الويب، تحليل البيانات، وتطبيقات رؤية الحاسوب لتمهيد طريقي كـ <strong>Web Developer</strong> محترف.",
+                skills_heading: "مهاراتي <span style='color:var(--main-color);'>التقنية</span>", skill_1: "برمجة بايثون (Python)", skill_2: "تطوير مواقع الويب", skill_3: "الواجهة الخلفية (Backend)", skill_4: "تحليل البيانات", skill_5: "رؤية الحاسوب (CV)", skill_6: "كتابة البرامج النصية",
+                cert_heading: "الشهادات <span style='color:var(--main-color);'>الاحترافية</span>", cert_title: "شهادة بايثون وتحليل البيانات - Code Nest", cert_desc: "بواقع 50 ساعة تدريبية، معتمدة من مركز نواة التقنية للتطوير.",
+                contact_heading: "تواصل <span style='color:var(--main-color);'>معي</span>", contact_desc: "هل لديك مشروع أو فكرة تود تنفيذها؟ لا تتردد في التواصل معي عبر المنصات التالية:", footer_text: "تم التصميم والتطوير بواسطة <span style='color:var(--main-color);'>إبراهيم عامر أبو عابد</span> &copy; 2026"
+            },
+            en: {
+                nav_home: "Home", nav_edu: "Education", nav_skills: "Skills", nav_cert: "Certificates", nav_contact: "Contact",
+                home_name: "Ibrahim <span style='color:var(--main-color);'>Abu Abed</span>", home_title: "Freelance Web Developer", home_desc: "Computer Engineering student and passionate software developer turning ideas into clean, efficient code. Focused on scripting, web development, and backend systems. Constantly striving to find innovative solutions and build high-quality projects.",
+                edu_heading: "Education <span style='color:var(--main-color);'>& Academics</span>", edu_uni: "Islamic University of Gaza (IUG)", edu_degree: "Second-Year Student - Computer Engineering", edu_desc: "Acquiring strong foundational knowledge in algorithms, data structures, electrical circuits, and programming languages like C++. Applying theoretical concepts to practical projects including web development, data analysis, and computer vision to pave my way as a professional <strong>Web Developer</strong>.",
+                skills_heading: "Technical <span style='color:var(--main-color);'>Skills</span>", skill_1: "Python Programming", skill_2: "Web Development", skill_3: "Backend Development", skill_4: "Data Analysis", skill_5: "Computer Vision (CV)", skill_6: "Scripting",
+                cert_heading: "Professional <span style='color:var(--main-color);'>Certificates</span>", cert_title: "Python & Data Analysis - Code Nest", cert_desc: "50 training hours, accredited by Nawah Technology Center.",
+                contact_heading: "Get in <span style='color:var(--main-color);'>Touch</span>", contact_desc: "Have a project or idea you want to bring to life? Feel free to contact me:", footer_text: "Designed and Developed by <span style='color:var(--main-color);'>Ibrahim Amer Abu Abed</span> &copy; 2026"
+            }
+        };
+
+        let currentLang = 'ar';
+        function toggleLanguage() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            document.documentElement.setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
+            document.documentElement.setAttribute('lang', currentLang);
+            document.body.style.fontFamily = currentLang === 'ar' ? "'Cairo', sans-serif" : "'Poppins', sans-serif";
+            document.querySelectorAll('[data-tr]').forEach(elem => {
+                const key = elem.getAttribute('data-tr');
+                if (translations[currentLang][key]) { elem.innerHTML = translations[currentLang][key]; }
+            });
+            document.getElementById('lang-text').innerText = currentLang === 'ar' ? 'English' : 'عربي';
+        }
+
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) { reveals[i].classList.add("active"); }
+            }
+        }
+        window.addEventListener("scroll", reveal); reveal();
+    </script>
+</body>
+</html>
